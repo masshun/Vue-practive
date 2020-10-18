@@ -27,6 +27,7 @@
 
 <script>
 export default {
+  name: 'Calc',
   data() {
     return {
       op: '',
@@ -101,6 +102,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .calculator {
+  padding-top: 5%;
   margin: 0 auto;
   width: 400px;
   font-size: 40px;
