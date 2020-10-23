@@ -1,9 +1,10 @@
 <template>
   <header class="header">
-    <h1>TodoList</h1>
+    <!-- <h1>TodoList</h1> -->
     <div id="nav">
       <router-link to="/">Top</router-link> |
-      <router-link to="/calc">Calc</router-link>
+      <router-link to="/calc">Calc</router-link> |
+      <router-link to="/weather">Weather</router-link>
     </div>
   </header>
 </template>
@@ -19,7 +20,7 @@ export default {
   background: rgb(65, 83, 139);
   color: white;
   text-align: center;
-  padding: 10px;
+  /* padding: 5px; */
 }
 
 .header a {
