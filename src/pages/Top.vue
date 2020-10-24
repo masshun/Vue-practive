@@ -51,17 +51,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.btn {
-  display: inline-block;
-  border: none;
-  background: #555;
-  color: white;
-  padding: 7px 20px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: #666;
-}
-</style>
+<style scoped></style>

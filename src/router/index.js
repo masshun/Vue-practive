@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Top from '../pages/Top.vue';
 import Calc from '../pages/Calculator.vue';
 import Weather from '../pages/Weather.vue';
+import Question from '../pages/QuestionTop.vue';
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,11 @@ const routes = [
     path: '/weather',
     name: 'Weather',
     component: Weather,
+  },
+  {
+    path: '/question',
+    name: 'Question',
+    component: Question,
   },
 ];
 
