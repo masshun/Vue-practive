@@ -4,7 +4,8 @@
     <div id="nav">
       <router-link to="/">Top</router-link> |
       <router-link to="/calc">Calc</router-link> |
-      <router-link to="/weather">Weather</router-link>
+      <router-link to="/weather">Weather</router-link> |
+      <router-link to="/question">Question</router-link>
     </div>
   </header>
 </template>

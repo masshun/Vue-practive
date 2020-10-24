@@ -1,11 +1,12 @@
 <template>
   <div>
-    <form @submit="addTodo">
+    <form @submit="addTodo" class="form-group">
       <input
         type="text"
         v-model="title"
         name="title"
         placeholder="Add Todo..."
+        class="form-control"
       />
       <input type="submit" value="Submit" class="btn" />
     </form>
