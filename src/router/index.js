@@ -4,6 +4,7 @@ import Top from '../pages/Top.vue';
 import Calc from '../pages/Calculator.vue';
 import Weather from '../pages/Weather.vue';
 import Question from '../pages/QuestionTop.vue';
+import DataList from '../pages/DataList.vue';
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,11 @@ const routes = [
     path: '/question',
     name: 'Question',
     component: Question,
+  },
+  {
+    path: '/datalist',
+    name: 'DataList',
+    component: DataList,
   },
 ];
 
