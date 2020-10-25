@@ -17,6 +17,7 @@
 <script>
 import QuestionBox from './QuestionBox.vue';
 import axios from 'axios';
+
 export default {
   name: 'Question',
   components: {
@@ -30,6 +31,7 @@ export default {
       numTotal: 0,
     };
   },
+
   async created() {
     await axios
       .get('https://opentdb.com/api.php?amount=10')

@@ -6,7 +6,8 @@
       <router-link to="/weather" active-class="f20" exact>Weather</router-link> |
       <router-link to="/question" active-class="f20" exact>Question</router-link> |
       <router-link to="/datalist" active-class="f20" exact>DataList</router-link> |
-      <router-link to="/calendar" active-class="f20" exact>Calendar</router-link>
+      <router-link to="/calendar" active-class="f20" exact>Calendar</router-link> |
+      <router-link to="/customcontent" active-class="f20" exact>Custom</router-link>
     </div>
   </header>
 </template>

@@ -6,6 +6,7 @@ import Weather from '../pages/Weather.vue';
 import Question from '../pages/QuestionTop.vue';
 import DataList from '../pages/DataList.vue';
 import Calendar from '../pages/Calendar.vue';
+import CustomContent from '../pages/CustomContent.vue';
 
 Vue.use(VueRouter);
 
@@ -42,6 +43,11 @@ const routes = [
     path: '/calendar',
     name: 'Calendar',
     component: Calendar,
+  },
+  {
+    path: '/customcontent',
+    name: 'CustomContent',
+    component: CustomContent,
   },
 ];
 
