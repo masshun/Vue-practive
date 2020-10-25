@@ -7,7 +7,7 @@
     <b-container class="bv-example-row">
       <b-row>
         <b-col sm="12">
-          <QuestionBox v-if="questions.length" :currentQuestion="questions[index]" :next="next" :increment="increment" />
+          <QuestionBox v-if="0 < questions.length" :currentQuestion="questions[index]" :next="next" :increment="increment" />
         </b-col>
       </b-row>
     </b-container>
@@ -30,8 +30,8 @@ export default {
       numTotal: 0,
     };
   },
-  created() {
-    axios
+  async created() {
+    await axios
       .get('https://opentdb.com/api.php?amount=10')
       .then((res) => {
         this.questions = res.data.results;
@@ -44,9 +44,14 @@ export default {
     },
     increment(isCorrect) {
       if (isCorrect) {
+        // 本来はstoreとコンポーネント内の同一のdataとは共有しない
         this.numCorrect++;
+        // this.$store.commit('addNumCorrect', this.numCorrect);
+        this.$store.dispatch('addNumCorrect', this.numCorrect);
       }
       this.numTotal++;
+      //   this.$store.commit('addNumTotal', this.numTotal);
+      this.$store.dispatch('addNumTotal', this.numTotal);
     },
   },
 };
