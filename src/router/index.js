@@ -5,6 +5,7 @@ import Calc from '../pages/Calculator.vue';
 import Weather from '../pages/Weather.vue';
 import Question from '../pages/QuestionTop.vue';
 import DataList from '../pages/DataList.vue';
+import Calendar from '../pages/Calendar.vue';
 
 Vue.use(VueRouter);
 
@@ -36,6 +37,11 @@ const routes = [
     path: '/datalist',
     name: 'DataList',
     component: DataList,
+  },
+  {
+    path: '/calendar',
+    name: 'Calendar',
+    component: Calendar,
   },
 ];
 

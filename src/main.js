@@ -17,6 +17,7 @@ Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(VueTextareaAutosize);
 const keys = key.getFirebaseKey();
+
 firebase.initializeApp({
   apiKey: keys.apiKey,
   authDomain: keys.authDomain,
