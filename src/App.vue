@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
-    <Header />
-    <router-view />
-  </div>
+  <v-app>
+    <div id="app">
+      <Header />
+      <router-view />
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -21,6 +23,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 </style>

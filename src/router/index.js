@@ -7,6 +7,10 @@ import Question from '../pages/QuestionTop.vue';
 import DataList from '../pages/DataList.vue';
 import Calendar from '../pages/Calendar.vue';
 import CustomContent from '../pages/CustomContent.vue';
+import Comments from '../pages/Comments.vue';
+import Register from '../pages/auth/Register.vue';
+import Login from '../pages/auth/Login.vue';
+import store from '../store/index';
 
 Vue.use(VueRouter);
 
@@ -48,6 +52,42 @@ const routes = [
     path: '/customcontent',
     name: 'CustomContent',
     component: CustomContent,
+  },
+  {
+    path: '/comments',
+    name: 'Comments',
+    component: Comments,
+    beforeEnter(to, from, next) {
+      if (store.getters.idToken) {
+        next();
+      } else {
+        next('/login');
+      }
+    },
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register,
+    beforeEnter(to, from, next) {
+      if (store.getters.idToken) {
+        next('/');
+      } else {
+        next();
+      }
+    },
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+    beforeEnter(to, from, next) {
+      if (store.getters.idToken) {
+        next('/');
+      } else {
+        next();
+      }
+    },
   },
 ];
 
