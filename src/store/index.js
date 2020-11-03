@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import quiz from './modules/quiz';
+import auth from './modules/auth';
 
 Vue.use(Vuex);
 
@@ -32,7 +32,7 @@ export default new Vuex.Store({
     getNumTotal: (state) => state.quiz.numTotal,
     getCorrectAnswerRate: (state) => parseFloat(state.quiz.numCorrect / state.quiz.numTotal) * 100,
   },
-  // modules: {
-  //   quiz,
-  // },
+  modules: {
+    auth,
+  },
 });
